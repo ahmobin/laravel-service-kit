@@ -29,7 +29,10 @@ class MakeServiceClassFile extends Command
         $name = $this->argument('name');
         $segments = explode('/', $name);
         $className = ucfirst(array_pop($segments));
-        $namespace = 'App\Http\Services\\' . implode('\\', array_map('ucfirst', $segments));
+        $namespace = 'App\Http\Services';
+        if (!empty($segments)) {
+            $namespace .= '\\' . implode('\\', array_map('ucfirst', $segments));
+        }
         $directory = app_path('Http/Services/' . implode('/', $segments));
         $fileName = "{$directory}/{$className}.php";
 

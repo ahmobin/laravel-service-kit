@@ -13,5 +13,8 @@
             "email": "ahmobin.cse@gmail.com"
         }
     ],
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0"
+    }
 }

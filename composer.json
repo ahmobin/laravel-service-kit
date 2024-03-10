@@ -1,0 +1,17 @@
+{
+    "name": "ahmobin/laravel-service-kit",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mobin\\LaravelServiceKit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ahmobin",
+            "email": "ahmobin.cse@gmail.com"
+        }
+    ],
+    "require": {}
+}

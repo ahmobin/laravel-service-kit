@@ -1,5 +1,11 @@
 {
     "name": "ahmobin/laravel-service-kit",
+    "description": "Laravel Service Kit is a PHP library that creates services, interfaces and repository class files.",
+    "keywords": [
+        "service",
+        "interface",
+        "repository"
+    ],
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -9,8 +15,7 @@
     },
     "authors": [
         {
-            "name": "ahmobin",
-            "email": "ahmobin.cse@gmail.com"
+            "name": "ahmobin"
         }
     ],
     "require": {

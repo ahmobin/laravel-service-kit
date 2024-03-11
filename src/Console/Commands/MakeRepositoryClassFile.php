@@ -88,7 +88,7 @@ class MakeRepositoryClassFile extends Command
 
 namespace {$namespace};
 
-use Mobin\LaravelServiceKit\Repositories\BaseRepository;
+use Mobin\LaravelServiceKit\Repository\BaseRepository;
 
 class {$className} extends BaseRepository
 {
@@ -103,7 +103,7 @@ class {$className} extends BaseRepository
 
 namespace {$namespace};
 
-use Mobin\LaravelServiceKit\BaseRepository;
+use Mobin\LaravelServiceKit\Repository\BaseRepository;
 use {$interfaceNamespace}\\{$interface};
 
 class {$className} extends BaseRepository implements {$interface}

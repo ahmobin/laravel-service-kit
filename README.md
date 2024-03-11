@@ -7,7 +7,7 @@ This package provides a set of commands to quickly generate service, interface, 
 Install the package via Composer:
 
 ```bash
-composer require ahmobin/laravel-service-kit
+composer require --dev ahmobin/laravel-service-kit
 ```
 
 #### Register Service Provider:

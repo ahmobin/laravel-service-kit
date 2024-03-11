@@ -38,5 +38,6 @@ To create a repository class, run the following command:
 php artisan make:repo YourClassNameRepository
 ```
 
+Further you may bind the repository class with interface in your AppServiceProvider
 
 Feel free to customize the class names as per your application's naming conventions.

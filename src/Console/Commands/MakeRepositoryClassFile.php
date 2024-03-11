@@ -41,7 +41,7 @@ class MakeRepositoryClassFile extends Command
         }
 
         if (File::exists($fileName)) {
-            $this->error("Repository {$className} already exists!");
+            $this->error("\n\u{00A0}\u{00A0}<options=bold;bg=red;fg=white>\u{00A0}ERROR\u{00A0}</> <fg=white>Repository {$className} already exists!</>\n");
             return;
         }
 
@@ -50,7 +50,7 @@ class MakeRepositoryClassFile extends Command
             $interface = ucfirst($interface);
             $interfaceNamespace = $this->searchInterfaceNamespace($interface);
             if (!$interfaceNamespace) {
-                $this->error("Interface {$interface} not found!");
+                $this->error("\n\u{00A0}\u{00A0}<options=bold;bg=red;fg=white>\u{00A0}ERROR\u{00A0}</> <fg=white>Interface {$interface} not found!</>\n");
                 return;
             }
 
@@ -62,7 +62,7 @@ class MakeRepositoryClassFile extends Command
 
         File::put($fileName, $content);
 
-        $this->info("\n\u{00A0}\u{00A0}<options=bold;bg=blue;fg=white>\u{00A0}INFO\u{00A0}</> <fg=#fff>Repository [app/Http/Repositories/{$name}] created successfully.</>\n");
+        $this->info("\n\u{00A0}\u{00A0}<options=bold;bg=blue;fg=white>\u{00A0}INFO\u{00A0}</> <fg=white>Repository [app/Http/Repositories/{$name}] created successfully.</>\n");
     }
 
     protected function searchInterfaceNamespace($interface)

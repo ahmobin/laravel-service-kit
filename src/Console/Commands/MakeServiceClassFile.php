@@ -41,7 +41,7 @@ class MakeServiceClassFile extends Command
         }
 
         if (File::exists($fileName)) {
-            $this->error("Service {$className} already exists!");
+            $this->error("\n\u{00A0}\u{00A0}<options=bold;bg=red;fg=white>\u{00A0}ERROR\u{00A0}</> <fg=white>Service {$className} already exists!</>\n");
             return;
         }
 
@@ -49,7 +49,7 @@ class MakeServiceClassFile extends Command
 
         File::put($fileName, $content);
 
-        $this->info("\n\u{00A0}\u{00A0}<options=bold;bg=blue;fg=white>\u{00A0}INFO\u{00A0}</> <fg=#fff>Service [app/Http/Services/{$name}] created successfully.</>\n");
+        $this->info("\n\u{00A0}\u{00A0}<options=bold;bg=blue;fg=white>\u{00A0}INFO\u{00A0}</> <fg=white>Service [app/Http/Services/{$name}] created successfully.</>\n");
     }
 
     protected function generateServiceStub($namespace, $className): string

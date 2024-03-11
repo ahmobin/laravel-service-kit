@@ -41,7 +41,7 @@ class MakeInterfaceClassFile extends Command
         }
 
         if (File::exists($fileName)) {
-            $this->error("Interface {$className} already exists!");
+            $this->error("\n\u{00A0}\u{00A0}<options=bold;bg=red;fg=white>\u{00A0}ERROR\u{00A0}</> <fg=white>Interface {$className} already exists!</>\n");
             return;
         }
 
@@ -49,7 +49,7 @@ class MakeInterfaceClassFile extends Command
 
         File::put($fileName, $content);
 
-        $this->info("\n\u{00A0}\u{00A0}<options=bold;bg=blue;fg=white>\u{00A0}INFO\u{00A0}</> <fg=#fff>Interface [app/Http/Interfaces/{$name}] created successfully.</>\n");
+        $this->info("\n\u{00A0}\u{00A0}<options=bold;bg=blue;fg=white>\u{00A0}INFO\u{00A0}</> <fg=white>Interface [app/Http/Interfaces/{$name}] created successfully.</>\n");
     }
 
     protected function generateServiceStub($namespace, $className): string
